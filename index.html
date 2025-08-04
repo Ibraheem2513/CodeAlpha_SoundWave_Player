@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundWave - Music Player</title>
+    <link rel="shortcut icon" href="assets/favicon/music.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fas fa-music"></i>
+                <span>SoundWave</span>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li class="nav-item active">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-search"></i>
+                        <span>Search</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Favorites</span>
+                    </li>
+                    <li class="nav-item">
+                        <i class="fas fa-list"></i>
+                        <span>Playlists</span>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="recently-played">
+                <h3>Recently Played</h3>
+                <div class="recent-item">
+                    <img src="assets/images/abstract.jpg" alt="Abstract Vibes">
+                    <div class="recent-info">
+                        <span class="recent-title">Abstract Vibes</span>
+                        <span class="recent-artist">Electronic Dreams</span>
+                    </div>
+                </div>
+                <div class="recent-item">
+                    <img src="assets/images/synthwave.jpg" alt="Synthwave Nights">
+                    <div class="recent-info">
+                        <span class="recent-title">Synthwave Nights</span>
+                        <span class="recent-artist">Retro Future</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for songs, artists, or albums...">
+                </div>
+                <div class="user-profile">
+                    <div class="profile-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </header>
+
+            <section class="hero-section">
+                <h1>Good evening</h1>
+                <p>Ready to discover your next favorite song?</p>
+            </section>
+
+            <section class="playlist-section">
+                <h2>Your Playlists</h2>
+                <div class="playlist-grid">
+                    <div class="playlist-card" data-playlist="favorites">
+                        <div class="playlist-cover">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Liked Songs</h3>
+                        <p>3 songs</p>
+                    </div>
+                    <div class="playlist-card" data-playlist="electronic">
+                        <div class="playlist-cover">
+                                <i class="fas fa-music"></i>
+                        </div>
+                        <h3>Electronic Mix</h3>
+                        <p>12 songs</p>
+                    </div>
+                    <div class="playlist-card" data-playlist="synthwave">
+                        <div class="playlist-cover">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Synthwave Collection</h3>
+                        <p>8 songs</p>
+                    </div>
+                    <div class="playlist-card" data-playlist="indie">
+                        <div class="playlist-cover">
+                            <i class="fas fa-arrows-alt"></i>
+                        </div>
+                        <h3>Indie Rock</h3>
+                        <p>15 songs</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="music-library">
+                <h2>Your Music</h2>
+                <div class="song-list" id="songList">
+                    <div class="song-item" data-song="0">
+                        <div class="song-number">1</div>
+                        <div class="song-info">
+                            <img src="assets/images/abstract.jpg" alt="Abstract Vibes" class="song-cover">
+                            <div class="song-details">
+                                <span class="song-title">Abstract Vibes</span>
+                                <span class="song-artist">Electronic Dreams</span>
+                            </div>
+                        </div>
+                        <div class="song-duration">3:45</div>
+                        <div class="song-actions">
+                            <button class="action-btn favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="action-btn more-btn">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="song-item" data-song="1">
+                        <div class="song-number">2</div>
+                        <div class="song-info">
+                            <img src="assets/images/neon-dreams.jpg" alt="Neon Dreams" class="song-cover">
+                            <div class="song-details">
+                                <span class="song-title">Neon Dreams</span>
+                                <span class="song-artist">Retro Future</span>
+                            </div>
+                        </div>
+                        <div class="song-duration">4:12</div>
+                        <div class="song-actions">
+                            <button class="action-btn favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="action-btn more-btn">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="song-item" data-song="2">
+                        <div class="song-number">3</div>
+                        <div class="song-info">
+                            <img src="assets/images/mountain-high.jpg" alt="Mountain High" class="song-cover">
+                            <div class="song-details">
+                                <span class="song-title">Mountain High</span>
+                                <span class="song-artist">Indie Collective</span>
+                            </div>
+                        </div>
+                        <div class="song-duration">3:28</div>
+                        <div class="song-actions">
+                            <button class="action-btn favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="action-btn more-btn">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Now Playing Bar -->
+        <div class="now-playing-bar">
+            <div class="now-playing-info">
+                <img src="assets/images/synthwave.jpg" alt="Current Song" class="current-cover" id="currentCover">
+                <div class="current-details">
+                    <span class="current-title" id="currentTitle">Abstract Vibes</span>
+                    <span class="current-artist" id="currentArtist">Electronic Dreams</span>
+                </div>
+                <button class="favorite-current">
+                    <i class="far fa-heart"></i>
+                </button>
+            </div>
+
+            <div class="player-controls">
+                <div class="control-buttons">
+                    <button class="control-btn shuffle-btn" id="shuffleBtn">
+                        <i class="fas fa-random"></i>
+                    </button>
+                    <button class="control-btn prev-btn" id="prevBtn">
+                        <i class="fas fa-step-backward"></i>
+                    </button>
+                    <button class="control-btn play-btn" id="playBtn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button class="control-btn next-btn" id="nextBtn">
+                        <i class="fas fa-step-forward"></i>
+                    </button>
+                    <button class="control-btn repeat-btn" id="repeatBtn">
+                        <i class="fas fa-redo"></i>
+                    </button>
+                </div>
+                <div class="progress-container">
+                    <span class="time-current" id="currentTime">0:00</span>
+                    <div class="progress-bar" id="progressBar">
+                        <div class="progress-fill" id="progressFill"></div>
+                        <div class="progress-handle" id="progressHandle"></div>
+                    </div>
+                    <span class="time-total" id="totalTime">3:45</span>
+                </div>
+            </div>
+
+            <div class="volume-controls">
+                <button class="volume-btn" id="volumeBtn">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <div class="volume-slider">
+                    <input type="range" id="volumeSlider" min="0" max="100" value="70">
+                </div>
+                <button class="queue-btn">
+                    <i class="fas fa-list-ul"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="audioPlayer" preload="metadata">
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
